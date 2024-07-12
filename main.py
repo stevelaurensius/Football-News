@@ -30,8 +30,8 @@ class bbcRssReader:
             except ValueError:
                 print('Insert Number')
             else:
-                if how_many < 1 or how_many > len(feedparser.parse(self.url)): 
-                    self.no_of_output = len(feedparser.parse(self.url))
+                if how_many < 1 or how_many > len(self.feed.entries): 
+                    self.no_of_output = len(self.feed.entries)
                     print()
                     break
                 else:
